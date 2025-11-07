@@ -44,7 +44,7 @@ const Hero = () => {
 </motion.h1>
 
 
-      <img src="./public/images/pea.png" alt="pea" className="pea-under-title" />
+      <img src="./images/pea.png" alt="pea" className="pea-under-title" />
 
       <img src="./public/images/tomato.png" alt="tomato" className="bg-tomato t1" />
       <img src="./public/images/tomato.png" alt="tomato" className="bg-tomato t2" />
