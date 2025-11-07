@@ -61,7 +61,7 @@ Interactive Features
 
 For support, email jiyajaiswal524@gmail.com or create an issue in the GitHub repository.
 
-Made with ❤️ and 🍜 by Your Name
+Made with ❤️ and 🍜 by Jiya Jaiswal
 
 <div align="center">
 Enjoy your Maggi! 🎉
