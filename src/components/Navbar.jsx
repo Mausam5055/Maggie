@@ -1,7 +1,13 @@
 import React from 'react'
 import './Navbar.css'
+import logoImg from '../assets/logo.png'
 
 const Navbar = () => {
+  // Fallback for missing images
+  const handleImageError = (e) => {
+    e.target.style.display = 'none';
+  };
+
   return (
     <nav className="navbar">
       <ul className="nav-links left">
@@ -12,7 +18,7 @@ const Navbar = () => {
       </ul>
 
       <div className="logo">
-        <img src='./images/logo.png' alt="Logo" />
+        <img src={logoImg} alt="Logo" onError={handleImageError} />
       </div>
 
       <ul className="nav-links right">

@@ -6,57 +6,6 @@
 }
 
 .hero {
-  background-color: #F9C74F; 
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  font-family: 'Rowdies', cursive;
-}
-
-.hero-blob {
-  position: absolute;
-  top: 230px;
-  left: 510px;
-  width: 500px;
-  height: 500px;
-  background: #000;
-  border-radius: 40% 60% 60% 40% / 50% 50% 50% 50%;
-  z-index: 0;
-}
-
-.hero-title {
-  position: absolute;
-  top: 200px; 
-  left: 420px; 
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 11rem;
-  font-weight: 700;
-  z-index: 1;
-  letter-spacing: 5px;
-}
-.bowl-img {
-  position: absolute;
-  top: 180px;
-  left: 400px; 
-  width: 400px;
-width: 700px;
-  z-index: 2;
-  filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.5)); 
-  transition: transform 0.3s ease;
-}
-
-.bowl-img:hover {
-  transform: scale(1.05); 
-}
-@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
-
-* {
-  padding: 0;
-  margin: 0;
-}
-
-.hero {
   background: radial-gradient(circle, #FFE34C 0%, #FFB900 100%);
   min-height: 100vh;
   display: flex;
@@ -115,102 +64,109 @@ width: 700px;
 
 .bowl-img {
   position: absolute;
-top: 30%;
+  top: 30%;
   left: 1%;
-
   width: 630px;
   z-index: 2;
+  filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.5)); 
+  transition: transform 0.3s ease;
 }
+
+.bowl-img:hover {
+  transform: scale(1.05); 
+}
+
 .bg-tomato{
-    width: 150px;
-    height: 150px;
+  width: 150px;
+  height: 150px;
 }
+
 .bg-basil{
-    width: 150px;
-    height: 150px;
+  width: 150px;
+  height: 150px;
 }
+
 .bowl-container {
-    position: absolute;
-    top: 30%;
-    left: 30%;
-  }
-  
-  .bowl-text {
-    position: absolute;
- top: 320px;
-    left: -380px;
-    color: #000;
-    font-size: 1.2rem;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+
+.bowl-text {
+  position: absolute;
+  top: 320px;
+  left: -380px;
+  color: #000;
+  font-size: 1.2rem;
   width: 430px;
   z-index: 10;
+}
 
-  }
-  .bowl-text p{
-    margin-bottom: 20px;
+.bowl-text p{
+  margin-bottom: 20px;
+}
 
-  }
-  .bowl-text .one-p{
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+.bowl-text .one-p{
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
 
-  }
-  .cta-btn {
-    padding: 8px 16px;
-    background: #F94144;
-    color: white;
-    width: 120px;
-    height: 50px;
-    font-size: 15px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .cta-btn:hover {
-    background: #d62828;
-  }
-  .highlight-card {
-    position: absolute;
-    right: -260px; 
-    top: 300px;
-    transform: translateY(-50%);
-    width: 200px;
-    padding: 20px;
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.15);
-    /* backdrop-filter: blur(8px); */
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  }
-  
-  .highlight-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-    color: #000;
-  }
-  
-  .highlight-card p {
-    font-size: 0.9rem;
-    margin-bottom: 12px;
-    font-family: 'Poppins', sans-serif;
+.cta-btn {
+  padding: 8px 16px;
+  background: #F94144;
+  color: white;
+  width: 120px;
+  height: 50px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 
-  }
-  
-  .highlight-btn {
-    background: #ff3d3d;
-    color: #fff;
-    padding: 8px 15px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .highlight-btn:hover {
-    background: #ff1a1a;
-  }
-  
+.cta-btn:hover {
+  background: #d62828;
+}
+
+.highlight-card {
+  position: absolute;
+  right: -260px; 
+  top: 300px;
+  transform: translateY(-50%);
+  width: 200px;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  /* backdrop-filter: blur(8px); */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.highlight-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.highlight-card p {
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.highlight-btn {
+  background: #ff3d3d;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.highlight-btn:hover {
+  background: #ff1a1a;
+}

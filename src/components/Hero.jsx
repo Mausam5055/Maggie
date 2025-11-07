@@ -2,6 +2,10 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import './Hero.css'
 import Navbar from './Navbar'
+import peaImg from '../assets/pea.png'
+import tomatoImg from '../assets/tomato.png'
+import basilImg from '../assets/basil1.png'
+import bowlImg from '../assets/bowl.png'
 
 const textVariant = {
   hidden: { x: -80, opacity: 0 },
@@ -13,6 +17,11 @@ const textVariant = {
 }
 
 const Hero = () => {
+  // Fallback for missing images
+  const handleImageError = (e) => {
+    e.target.style.display = 'none';
+  };
+
   return (
     <div className="hero">
       <div className="hero-blob"></div>
@@ -44,25 +53,25 @@ const Hero = () => {
 </motion.h1>
 
 
-      <img src="./images/pea.png" alt="pea" className="pea-under-title" />
+      <img src={peaImg} alt="pea" className="pea-under-title" onError={handleImageError} />
 
-      <img src="./images/tomato.png" alt="tomato" className="bg-tomato t1" />
-      <img src="./images/tomato.png" alt="tomato" className="bg-tomato t2" />
-      <img src="./images/tomato.png" alt="tomato" className="bg-tomato t3" />
-      <img src="./images/tomato.png" alt="tomato" className="bg-tomato t4" />
+      <img src={tomatoImg} alt="tomato" className="bg-tomato t1" onError={handleImageError} />
+      <img src={tomatoImg} alt="tomato" className="bg-tomato t2" onError={handleImageError} />
+      <img src={tomatoImg} alt="tomato" className="bg-tomato t3" onError={handleImageError} />
+      <img src={tomatoImg} alt="tomato" className="bg-tomato t4" onError={handleImageError} />
 
-      <img src="./images/basil1.png" alt="basil1" className="bg-basil b1" />
-      <img src="./images/basil1.png" alt="basil2" className="bg-basil b2" />
+      <img src={basilImg} alt="basil1" className="bg-basil b1" onError={handleImageError} />
+      <img src={basilImg} alt="basil2" className="bg-basil b2" onError={handleImageError} />
 
       <div className="bowl-container">
         <motion.img
-          src="./images/bowl.png"
-          alt="bowl"
+          src={bowlImg} alt="bowl"
           className="bowl-img"
           style={{ zIndex: 5, position: 'relative' }}
           initial={{ y: 150, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 1, ease: 'easeOut' }}
+          onError={handleImageError}
         />
 
         <div className="bowl-text">

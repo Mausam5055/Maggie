@@ -2,9 +2,14 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './Slider.css';
+import maggie1Img from '../assets/maggie1.png';
+import maggie2Img from '../assets/maggie2.png';
+import maggie3Img from '../assets/maggie3.png';
+import maggie4Img from '../assets/maggie4.png';
+
 const slides = [
   {
-    image: '/images/maggie1.png',
+    image: maggie1Img,
     name: 'Maggi 2-Minute Noodles',
     desc: `The iconic Maggi that started it all.  
 Ready in just two minutes, it’s the ultimate snack for anytime hunger strikes.  
@@ -13,7 +18,7 @@ A quick fix that’s always a comfort.`,
     nutrition: { energy: 299, protein: 5.6, carbohydrate: 44.5, sugars: 1.5, fibre: 2.5, fat: 11, sodium: 820.6 }
   },
   {
-    image: '/images/maggie2.png',
+    image: maggie2Img,
     name: 'Maggi Special Masala',
     desc: `A richer, spicier twist for the flavor adventurer.  
 Packed with a secret blend of aromatic spices for a mouthwatering kick.  
@@ -22,7 +27,7 @@ Perfect for those who like life a little extra.`,
     nutrition: { energy: 320, protein: 6.2, carbohydrate: 48.1, sugars: 2.0, fibre: 3.0, fat: 12, sodium: 810.0 }
   },
   {
-    image: '/images/maggie3.png',
+    image: maggie3Img,
     name: 'Maggi Veggie Masala',
     desc: `A wholesome twist with the goodness of vegetables in every bite.  
 Bright, colorful bits of veggies blend perfectly with the signature Maggi masala.  
@@ -31,7 +36,7 @@ Ideal for a quick, hearty lunch or snack.`,
     nutrition: { energy: 280, protein: 5.0, carbohydrate: 42.0, sugars: 1.0, fibre: 2.2, fat: 10, sodium: 800.0 }
   },
   {
-    image: '/images/maggie4.png',
+    image: maggie4Img,
     name: 'Maggi Chicken Noodles',
     desc: `Tender noodles infused with delicious chicken flavor.  
 A rich, savory broth that warms you from the first spoonful.  
@@ -40,7 +45,6 @@ A must-have for every non-veg noodle lover.`,
     nutrition: { energy: 310, protein: 5.8, carbohydrate: 46.0, sugars: 1.8, fibre: 2.7, fat: 11.5, sodium: 815.0 }
   }
 ];
-
 
 const Slider = () => {
   const [index, setIndex] = useState(0);
@@ -75,6 +79,11 @@ const Slider = () => {
   }, [index]);
 
   const { nutrition } = slides[index];
+  
+  // Fallback for missing images
+  const handleImageError = (e) => {
+    e.target.style.display = 'none';
+  };
 
   return (
     <div className="slider" ref={sliderRef}>
@@ -103,6 +112,7 @@ const Slider = () => {
         animate={{ rotateY: 0, opacity: 1 }}
         exit={{ rotateY: -90, opacity: 0 }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
+        onError={handleImageError}
       />
     )
   )}
